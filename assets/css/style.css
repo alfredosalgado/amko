@@ -875,10 +875,17 @@ body {
         transform: translateY(-8px) rotate(-45deg);
     }
     
+    .hero {
+        padding-top: 80px;
+        justify-content: center;
+    }
+    
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 2rem;
+        align-items: center;
+        justify-content: center;
     }
     
     .hero-title {
@@ -921,8 +928,31 @@ body {
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding-top: 100px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-content {
+        padding: 2rem 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
     .hero-title {
         font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
     
     .section-title {
