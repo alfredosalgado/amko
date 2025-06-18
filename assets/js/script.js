@@ -135,9 +135,13 @@ function initScrollEffects() {
                 entry.target.style.transform = 'translateY(0)';
                 
                 // Special animation for stats
-                if (entry.target.classList.contains('stat')) {
+                if (entry.target.classList.contains('stat') && !entry.target.dataset.animated) {
+                    entry.target.dataset.animated = 'true';
                     animateCounter(entry.target);
                 }
+                
+                // Stop observing this element after animation
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -161,16 +165,26 @@ function animateCounter(element) {
     
     if (isNaN(target)) return;
     
+    // Clear any existing timer to prevent conflicts
+    if (element.counterTimer) {
+        clearInterval(element.counterTimer);
+    }
+    
     let current = 0;
-    const increment = target / 50;
-    const timer = setInterval(() => {
+    const duration = 2000; // 2 seconds total duration
+    const steps = 60; // Number of animation steps
+    const increment = target / steps;
+    const stepDuration = duration / steps;
+    
+    element.counterTimer = setInterval(() => {
         current += increment;
         if (current >= target) {
             current = target;
-            clearInterval(timer);
+            clearInterval(element.counterTimer);
+            element.counterTimer = null;
         }
         numberElement.textContent = Math.floor(current) + suffix;
-    }, 50);
+    }, stepDuration);
 }
 
 // WhatsApp Integration
