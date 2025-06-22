@@ -408,6 +408,15 @@ body {
     gap: 8px;
 }
 
+.producto-badges-bottom {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    margin-top: -10px;
+    z-index: 3;
+    position: relative;
+}
+
 .badge {
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -422,7 +431,7 @@ body {
 }
 
 .badge.equilibrio {
-    background: var(--gradient-secondary);
+    background: var(--gradient-accent);
 }
 
 .badge.energia {
@@ -430,7 +439,7 @@ body {
 }
 
 .badge.bienestar {
-    background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+    background: var(--gradient-accent);
 }
 
 .producto-content {
