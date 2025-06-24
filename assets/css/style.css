@@ -844,6 +844,13 @@ body {
     transform: translateX(0);
 }
 
+/* Large Screens */
+@media (min-width: 1025px) {
+    .hero {
+        padding-top: 160px;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .hamburger {
@@ -884,7 +891,7 @@ body {
     }
     
     .hero {
-        padding-top: 150px;
+        padding-top: 180px;
         justify-content: center;
     }
     
@@ -937,7 +944,7 @@ body {
 
 @media (max-width: 480px) {
     .hero {
-        padding-top: 100px;
+        padding-top: 160px;
         min-height: 100vh;
         display: flex;
         align-items: center;
