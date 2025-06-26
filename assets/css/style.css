@@ -1001,6 +1001,206 @@ body {
         min-height: auto;
         padding: 2rem 0;
     }
+}
+
+/* Discover AMKO Section */
+.discover-amko {
+    padding: 60px 0 40px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    text-align: center;
+}
+
+.discover-header {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Navigation Sections */
+.nav-section {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-section:nth-child(even) {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.nav-section:nth-child(odd) {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.nav-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-content.reverse {
+    direction: rtl;
+}
+
+.nav-content.reverse > * {
+    direction: ltr;
+}
+
+.nav-text {
+    padding: 20px;
+}
+
+.nav-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #2E7D32, #4CAF50);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: white;
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(46, 125, 50, 0.2);
+}
+
+.nav-section:hover .nav-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 40px rgba(46, 125, 50, 0.3);
+}
+
+.nav-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2E7D32;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.nav-description {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #2E7D32, #4CAF50);
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(46, 125, 50, 0.2);
+}
+
+.nav-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.nav-btn:hover::before {
+    left: 100%;
+}
+
+.nav-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(46, 125, 50, 0.3);
+}
+
+.nav-btn i {
+    transition: transform 0.3s ease;
+}
+
+.nav-btn:hover i {
+    transform: translateX(5px);
+}
+
+.nav-visual {
+    position: relative;
+}
+
+.nav-image-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.nav-section:hover .nav-image-container {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.nav-image {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.nav-section:hover .nav-image {
+    transform: scale(1.05);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-section {
+        padding: 60px 0;
+    }
+    
+    .nav-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .nav-content.reverse {
+        direction: ltr;
+    }
+    
+    .nav-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .nav-icon {
+        margin: 0 auto 30px;
+    }
+    
+    .nav-title {
+        font-size: 1.8rem;
+    }
+    
+    .nav-description {
+        font-size: 1rem;
+    }
+    
+    .nav-image {
+        height: 250px;
+        object-fit: contain;
+    }
+}
     
     .section {
         page-break-inside: avoid;
