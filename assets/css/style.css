@@ -176,7 +176,7 @@ body {
 }
 
 .hero-text {
-    color: var(--white);
+    color: black;
 }
 
 .hero-logo {
@@ -187,7 +187,6 @@ body {
 .hero-logo-img {
     width: 400px;
     height: auto;
-    filter: brightness(0) invert(1);
     transition: var(--transition);
 }
 
@@ -212,6 +211,8 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    -webkit-text-stroke: 0.5px black;
+    text-stroke: 0.5px black;
 }
 
 .hero-subtitle {
@@ -865,8 +866,12 @@ body {
 /* Large Screens */
 @media (min-width: 1025px) {
     .hero {
-        padding-top: 80px;
+        padding-top: 90px;
         padding-bottom: 80px;
+    }
+    
+    .hero-image {
+        margin-top: -250px;
     }
 }
 
