@@ -140,7 +140,7 @@ body {
     position: relative;
     display: flex;
     align-items: flex-start;
-    padding-top: 90px;
+    padding-top: 50px;
     overflow: hidden;
 }
 
@@ -865,7 +865,7 @@ body {
 /* Large Screens */
 @media (min-width: 1025px) {
     .hero {
-        padding-top: 90px;
+        padding-top: 80px;
         padding-bottom: 80px;
     }
 }
@@ -910,7 +910,7 @@ body {
     }
     
     .hero {
-        padding-top: 180px;
+        padding-top: 80px;
         justify-content: center;
     }
     
@@ -963,10 +963,10 @@ body {
 
 @media (max-width: 480px) {
     .hero {
-        padding-top: 160px;
+        padding-top: 120px;
         min-height: 100vh;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
     }
     
@@ -996,6 +996,43 @@ body {
     .btn {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
+    }
+}
+
+/* Extra small devices (phones, less than 400px) */
+@media (max-width: 400px) {
+    .hero-logo {
+        margin-bottom: 1rem;
+    }
+    
+    .hero-logo-img {
+        width: 200px;
+        max-width: 90vw;
+    }
+    
+    .hero-title {
+        font-size: 1.6rem;
+        padding: 0 15px;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 1.2rem;
+        padding: 0 15px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        line-height: 1.4;
+    }
+    
+    .hero-content {
+        padding: 0 15px;
+        gap: 4rem;
     }
     
     .productos-grid {
