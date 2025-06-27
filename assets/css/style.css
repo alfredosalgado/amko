@@ -136,11 +136,12 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: 40vh;
     position: relative;
     display: flex;
     align-items: flex-start;
     padding-top: 50px;
+    padding-bottom: 20px;
     overflow: hidden;
 }
 
@@ -972,10 +973,14 @@ body {
 @media (max-width: 480px) {
     .hero {
         padding-top: 70px;
-        min-height: 100vh;
+        min-height: 40vh;
         display: flex;
         align-items: flex-start;
         justify-content: center;
+    }
+    
+    .hero-background {
+        background-position: right center;
     }
     
     .hero-content {
