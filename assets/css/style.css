@@ -973,14 +973,15 @@ body {
 @media (max-width: 480px) {
     .hero {
         padding-top: 70px;
-        min-height: 40vh;
+        min-height: 100vh;
         display: flex;
         align-items: flex-start;
         justify-content: center;
     }
     
     .hero-background {
-        background-position: right center;
+        background: url('../img/hero-background3.png') center/cover no-repeat;
+        background-position: center;
     }
     
     .hero-content {
