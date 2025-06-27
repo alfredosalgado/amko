@@ -74,7 +74,8 @@ body {
 
 .logo-img {
     width: 180px;
-  
+    filter: brightness(0) invert(1);
+  padding-right: 15px;
     
    
 }
