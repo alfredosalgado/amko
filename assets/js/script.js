@@ -8,9 +8,26 @@ document.addEventListener('DOMContentLoaded', function() {
     initWhatsAppIntegration();
     initImageLazyLoading();
     initPerformanceOptimizations();
+    initHeroScrollArrow();
     
     console.log('AMKO website loaded successfully!');
 });
+
+// Hero Scroll Arrow Functionality
+function initHeroScrollArrow() {
+    // Make scrollToNextSection function globally available
+    window.scrollToNextSection = function() {
+        const hero = document.querySelector('.hero');
+        const nextSection = hero.nextElementSibling;
+        
+        if (nextSection) {
+            nextSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+}
 
 // Navigation Functionality
 function initNavigation() {
