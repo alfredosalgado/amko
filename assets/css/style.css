@@ -972,11 +972,15 @@ body {
 
 @media (max-width: 480px) {
     .hero {
-        padding-top: 70px;
         min-height: 100vh;
         display: flex;
         align-items: flex-start;
         justify-content: center;
+    }
+    
+    /* Padding específico para páginas internas */
+    body:not([data-page="home"]) .hero {
+        padding-top: 80px !important;
     }
     
     .hero-background {
@@ -985,12 +989,17 @@ body {
     }
     
     .hero-content {
-        padding: 2rem 20px;
+        padding: 1rem 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         text-align: center;
+    }
+    
+    .hero-logo {
+        margin-top: 10px;
+        margin-bottom: 1rem;
     }
     
     .hero-title {
@@ -1275,4 +1284,3 @@ body {
     .section {
         page-break-inside: avoid;
     }
-}
